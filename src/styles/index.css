@@ -10,3 +10,40 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.todo-item {
+    position: relative;
+}
+
+.remove {
+    display: none;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.todo-item:hover .remove {
+    display: inline; 
+}
+   
+.title{
+    font-size: 5rem;
+    font-weight: 100;
+    color: rgb(89%, 79%, 79%);
+    border:none;
+}
+
+body{
+    background-color: black;
+}
+.box{
+    border-left:none;
+}
+.itemcounter{
+    font-size:13px;
+}
+.tasks, li, input{
+    font-size: 20px;
+}
+.crack{
+    border:none;
+}
