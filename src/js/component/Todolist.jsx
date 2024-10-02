@@ -100,25 +100,21 @@ const TodoList = () => {
                         placeholder="What needs to be done?"></input>
                 </li>
                 {todos.length === 0 ? (
-                    <li className="list-group-item tasks d-flex ps-5"> No hay tareas, añadir tareas</li>
+                    <li className="list-group-item tasks d-flex ps-5 text-secondary"> No hay tareas, añadir tareas</li>
                 ) : (
                     todos.map((item) => (
-                        <li key={item.id} className="list-group-item todo-item d-flex ps-5">
+                        <li key={item.id} className="list-group-item todo-item d-flex ps-5 text-secondary">
                             {item.label}
-                            <span
-                                className="remove"
+                            <button
+                                className="remove text-success"
                                 // onClick={() => setTodos(todos.filter((_, currentIndex) => index !== currentIndex))}
                                 onClick={() => deleteTodo(item.id)}
                             >
                                 X
-                            </span>
+                            </button>
                         </li>
                     )))}
-                <li className="itemcounter list-group-item d-flex ms-0"> {todos.length} item left</li>
-                <div>
-                    <li className="d-flex ms-1 me-1 list-group-item p-1"></li>
-                    <li className="d-flex ms-2 me-2 list-group-item p-1"></li>
-                </div>
+                <li className="itemcounter list-group-item d-flex ms-0 text-secondary"> {todos.length} item left</li>
             </ul>
         </div>
     );
