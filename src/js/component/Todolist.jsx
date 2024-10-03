@@ -66,7 +66,7 @@ const TodoList = () => {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
             })
-            const data = await response.json()
+            const data = response.json()
             console.log(data);
             getTodos();
             return true;
